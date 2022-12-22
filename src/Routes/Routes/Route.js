@@ -4,7 +4,6 @@ import Main from "../../layoute/Main";
 import Appointment from "../../pages/Appointment/Appointment/Appointment";
 import Adddoctor from "../../pages/Dsahboard/AddDoctor/Adddoctor";
 import AllUsers from "../../pages/Dsahboard/Dsahboard/AllUsers/AllUsers";
-import Dsahboard from "../../pages/Dsahboard/Dsahboard/Dsahboard";
 import ManageDoctors from "../../pages/Dsahboard/ManageDoctor.js/ManageDoctors";
 import MyAppointment from "../../pages/Dsahboard/MyAppointment/MyAppointment";
 import Payment from "../../pages/Dsahboard/Payment/Payment";
@@ -65,7 +64,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/payment/:id',
                 element: <AdminRoute><Payment></Payment></AdminRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                loader: ({ params }) => fetch(`https://doctors-potal-server-ashimmollick.vercel.app/bookings/${params.id}`)
             },
         ]
 

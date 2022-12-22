@@ -28,7 +28,7 @@ const BookingModal = ({ treatement, setTreatement, selectDate, refetch }) => {
 
         }
         console.log(booking)
-        fetch('http://localhost:5000/booking', {
+        fetch('https://doctors-potal-server-ashimmollick.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

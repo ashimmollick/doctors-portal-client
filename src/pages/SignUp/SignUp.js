@@ -41,21 +41,24 @@ const SignUp = () => {
             });
     }
     const saveUser = (name, email) => {
-        const user = { name, email };
-        fetch('http://localhost:5000/users', {
+        const user = { name, email }
+
+        fetch('https://doctors-potal-server-ashimmollick.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(user)
+
         })
             .then(res => res.json())
             .then(data => {
                 setCreateUserEmail(email)
 
             })
-    }
 
+
+    }
 
     return (
         <div className='h-[800px] flex justify-center items-center'>
